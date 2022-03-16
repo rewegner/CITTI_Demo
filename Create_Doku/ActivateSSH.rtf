@@ -1,0 +1,45 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2636
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fnil\fcharset0 Menlo-Regular;}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue0;}
+{\*\expandedcolortbl;;\csgray\c0;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 Bestehenden SSH Key (re-)aktivieren:\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f1\fs22 \cf2 \CocoaLigature0 rwegner@MacBook-Pro-von-Reinhard CITTI % ls -al ~/.ssh\
+total 56\
+drwx------   7 rwegner  staff   224  8 Nov 19:00 .\
+drwxr-xr-x+ 72 rwegner  staff  2304 16 M\'e4r 16:00 ..\
+-rw-r--r--@  1 rwegner  staff  6148  8 Nov 18:59 .DS_Store\
+-rw-r--r--@  1 rwegner  staff    74  8 Nov 19:00 config\
+-rw-------   1 rwegner  staff  2675  8 Nov 16:36 id_rsa\
+-rw-r--r--@  1 rwegner  staff   592  8 Nov 16:36 id_rsa.pub\
+-rw-r--r--   1 rwegner  staff  5448  3 Nov 13:53 known_hosts\
+   ---> Ben\'f6tigte Files sind da\
+rwegner@MacBook-Pro-von-Reinhard CITTI % eval "$(ssh-agent -s)"\
+Agent pid 73429\
+   ---> Agent l\'e4uft\
+rwegner@MacBook-Pro-von-Reinhard CITTI % vi ~/.ssh/config\
+   ---> id_rsa wird verwendet\
+rwegner@MacBook-Pro-von-Reinhard CITTI % ssh-add -K ~/.ssh/id_rsa    \
+WARNING: The -K and -A flags are deprecated and have been replaced\
+         by the --apple-use-keychain and --apple-load-keychain\
+         flags, respectively.  To suppress this warning, set the\
+         environment variable APPLE_SSH_ADD_BEHAVIOR as described in\
+         the ssh-add(1) manual page.\
+   ---> Apple user ist bekannt gemacht\
+Identity added: /Users/rwegner/.ssh/id_rsa (rwegner@MacBook-Pro-von-Reinhard.local)\
+rwegner@MacBook-Pro-von-Reinhard CITTI % pbcopy < ~/.ssh/id_rsa.pub \
+   ---> Public Key in Clipboard (Ctrl - C)   \
+In GitHub.com einloggen, in "Logged-in User Icon" (rechts oben) - rechte Maus - Settings - SSH and GPG keys: <New SSH Key>: Public key hier pasten (Ctrl - V)\
+   ---> Jetzt ist der User startbereit\
+rwegner@MacBook-Pro-von-Reinhard CITTI % git clone git@github.com:rewegner/CITTI_Demo.git\
+Klone nach 'CITTI_Demo' ...\
+remote: Enumerating objects: 3, done.\
+remote: Counting objects: 100% (3/3), done.\
+Empfange Objekte: 100% (3/3), fertig.\
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0\
+   ---> Das Repository ist auch lokal vorhanden\
+}
