@@ -1,4 +1,5 @@
 Dieser Text ist zum Testen und Mergen.
 Damit kann man rumspielen (wenn auch nicht Rum spielen).
 Der Inhalt ist nicht so wichtig.
+Da kann auch mal eine Zeile dazugefügt werden.
 Hauptsache, es sind ein paar Zeilen Text.
