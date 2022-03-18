@@ -2,3 +2,4 @@ Dieser Text ist zum Testen und Mergen.
 Damit kann man rumspielen (wenn auch nicht Rum spielen).
 Der Inhalt ist nicht so wichtig.
 Hauptsache, es sind ein paar Zeilen Text.
+Eine neue Zeile am Ende, das bringts.
