@@ -1,0 +1,3 @@
+Test BBEdit Text.
+Mit mehr als einer Zeile
+Und noch eine Zeile
